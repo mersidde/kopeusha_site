@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Запись на консультацию к психологу Ксении Копейкиной. Индивидуальные сессии, групповая терапия, лагерь для взрослых.">
+    <title>Записаться на консультацию — Ксения Копейкина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="booking-page">
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__name">Ксения Копейкина</span>
+                <span class="logo__sub">психолог · коуч</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="about.html" class="nav__link">Обо мне</a>
+                <a href="services.html" class="nav__link">Услуги</a>
+                <a href="products.html" class="nav__link">Продукты</a>
+                <a href="faq.html" class="nav__link">FAQ</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+                <a href="booking.html" class="nav__link nav__link--cta">Записаться</a>
+            </nav>
+            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="booking-hero">
+        <div class="container">
+            <div class="booking-hero__inner">
+                <div class="booking-hero__content">
+                    <a href="index.html" class="back-link">← Вернуться на главную</a>
+                    <h1 class="booking-hero__title">Запись на <span class="accent">консультацию</span></h1>
+                    <p class="booking-hero__text">Заполните форму — я свяжусь с вами в течение 24 часов, чтобы обсудить удобное время и формат работы.</p>
+                    <div class="booking-info">
+                        <div class="booking-info__item">
+                            <span class="booking-info__icon">⏱️</span>
+                            <div><strong>60 минут</strong><span>длительность сессии</span></div>
+                        </div>
+                        <div class="booking-info__item">
+                            <span class="booking-info__icon">💻</span>
+                            <div><strong>Онлайн или офлайн</strong><span>Zoom, Skype, Telegram</span></div>
+                        </div>
+                        <div class="booking-info__item">
+                            <span class="booking-info__icon">🔒</span>
+                            <div><strong>Полная конфиденциальность</strong><span>ваши данные в безопасности</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-wrap">
+                    <form class="booking-form" id="bookingForm" novalidate>
+                        <h2 class="booking-form__title">Ваши данные</h2>
+                        <div class="form-group">
+                            <label for="name">Как к вам обращаться? *</label>
+                            <input type="text" id="name" name="name" required minlength="2" placeholder="Ваше имя">
+                            <span class="form-error" data-error-for="name"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                                <span class="form-error" data-error-for="email"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                                <span class="form-error" data-error-for="phone"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Формат работы *</label>
+                            <div class="radio-group">
+                                <label class="radio-card">
+                                    <input type="radio" name="format" value="individual" required>
+                                    <span class="radio-card__icon">👤</span>
+                                    <span class="radio-card__title">Индивидуальная</span>
+                                    <span class="radio-card__desc">60 минут один на один</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="format" value="group">
+                                    <span class="radio-card__icon">👥</span>
+                                    <span class="radio-card__title">Групповая терапия</span>
+                                    <span class="radio-card__desc">10 недель в группе</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="format" value="camp">
+                                    <span class="radio-card__icon">🌿</span>
+                                    <span class="radio-card__title">Лагерь для взрослых</span>
+                                    <span class="radio-card__desc">4 недели интенсива</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="format" value="not-sure">
+                                    <span class="radio-card__icon">💭</span>
+                                    <span class="radio-card__title">Еще не решил(а)</span>
+                                    <span class="radio-card__desc">Помогите выбрать</span>
+                                </label>
+                            </div>
+                            <span class="form-error" data-error-for="format"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="channel">Как вам удобнее связаться? *</label>
+                            <select id="channel" name="channel" required>
+                                <option value="">Выберите способ связи</option>
+                                <option value="telegram">Telegram</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="phone">Телефон</option>
+                                <option value="email">Email</option>
+                            </select>
+                            <span class="form-error" data-error-for="channel"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Кратко опишите ваш запрос <span class="optional">(необязательно)</span></label>
+                            <textarea id="message" name="message" rows="4" maxlength="1000" placeholder="Что вас беспокоит? С чем хотели бы поработать?"></textarea>
+                            <span class="form-counter"><span id="msgCount">0</span> / 1000</span>
+                        </div>
+                        <div class="honeypot" aria-hidden="true">
+                            <label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                        </div>
+                        <label class="checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span class="checkbox__mark"></span>
+                            <span>Я согласен(а) с <a href="https://t.me/ipkopeusha_psy" target="_blank" rel="noopener">политикой обработки персональных данных</a> *</span>
+                        </label>
+                        <span class="form-error" data-error-for="consent"></span>
+                        <button type="submit" class="btn btn--primary btn--large btn--full">
+                            <span class="btn__text">Отправить заявку</span>
+                            <!-- <span class="btn__loader" hidden>
+                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                    <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="40" stroke-dashoffset="10">
+                                        <animateTransform attributeName="transform" type="rotate" from="0 10 10" to="360 10 10" dur="1s" repeatCount="indefinite"/>
+                                    </circle>
+                                </svg>
+                                Отправляем... -->
+                            </span>
+                        </button>
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с 152-ФЗ</p>
+                    </form>
+
+                    <div class="booking-success" id="bookingSuccess" hidden>
+                        <div class="booking-success__icon">✓</div>
+                        <h2>Заявка отправлена!</h2>
+                        <p>Спасибо, что доверяете мне. Я свяжусь с вами в течение 24 часов, чтобы обсудить удобное время.</p>
+                        <p>А пока — подпишитесь на <a href="https://t.me/kopeusha_psy" target="_blank" rel="noopener">Telegram-канал</a>, там много полезного.</p>
+                        <a href="index.html" class="btn btn--outline">Вернуться на главную</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo"><span class="logo__name">Ксения Копейкина</span><span class="logo__sub">психолог · коуч</span></div>
+                <p class="footer__desc">Помощь взрослым детям деструктивных семей</p>
+                <div class="footer__contacts">
+                    <a href="mailto:hello@kopeusha.ru">hello@kopeusha.ru</a>
+                    <a href="https://t.me/kopeusha_psy" target="_blank" rel="noopener">Telegram-канал</a>
+                    <a href="https://t.me/kopeusha_support" target="_blank" rel="noopener">Написать в поддержку</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Навигация</h4>
+                <a href="index.html">Главная</a>
+                <a href="about.html">Обо мне</a>
+                <a href="services.html">Услуги</a>
+                <a href="products.html">Продукты</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="footer__col">
+                <h4>Услуги</h4>
+                <a href="services.html">Индивидуальная консультация</a>
+                <a href="services.html">Групповая терапия</a>
+                <a href="services.html">Лагерь для взрослых</a>
+                <a href="products.html">Практикум</a>
+            </div>
+            <div class="footer__col">
+                <h4>Документы</h4>
+                <a href="https://t.me/ipkopeusha_psy" target="_blank" rel="noopener">Политика конфиденциальности</a>
+                <a href="contacts.html">Реквизиты ИП Луговская</a>
+            </div>
+        </div>
+        <div class="footer__bottom"><div class="container"><p>© 2026 ИП Луговская. Все права защищены.</p></div></div>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
